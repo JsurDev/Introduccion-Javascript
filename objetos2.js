@@ -1,5 +1,4 @@
 //Practicando recorrido de array objetos
-
 const arrayObj = [
     {
         name: 'Joseph',
@@ -23,7 +22,6 @@ for (let i = 0; i < arrayObj.length; i++) {
     console.log('Edge:' + arrayObj[i].edge);
     console.log('Favorite Food: ' + arrayObj[i].favoriteFood);
 }
-
 
 //------------------//
 console.log('--------------------')

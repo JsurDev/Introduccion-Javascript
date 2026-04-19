@@ -27,10 +27,8 @@ const persona = {
         color: 'Negro',
     }
 };
-
 console.log(persona);
 console.log(persona.carro.marca);
-
 
 //Funcion
 function jS() {
