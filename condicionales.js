@@ -37,9 +37,9 @@ const buscarHerr = 'Machete';
 const herrBuscada = herramientas2.indexOf(buscarHerr);
 
 if (herramientas2.length > 3 && herramientas2[herrBuscada]) {
-    console.log(`Caja llena ${herramientas2[herrBuscada]} en caja`);
+    console.log(`Caja llena ${herramientas2[herrBuscada]} en caja`)
 } else {
-    console.log(`Aun cabe mas en la caja, ${buscarHerr} no tienes aun`);
+    console.log(`Aun cabe mas en la caja, ${buscarHerr} no tienes aun`)
 }
 
 //Ejercicio 4
@@ -58,4 +58,54 @@ if (persona2.edad >= 18 && persona2.ticket) {
     console.log('Eres mayor de edad pero No tienes ticket')
 } else {
     console.log('No cumples ningun requisito para ingresar')
+}
+
+
+
+//Ejercicio 5
+/**Crea un objeto producto con nombre y precio.
+ *  Si el cliente tiene un cupon, 
+ * resta un 20% al precio;
+ *  si no, muestra el precio original. */
+
+const producto = {
+    nombre: 'Martillo',
+    precio: 15,
+    cupon: true,
+};
+
+//const productoFinal = 'Martillo';
+const precio = 15;
+const descuento = 0.2;
+
+const descuentoAplicar = (precio * descuento);
+const precioFinal = (precio - descuentoAplicar);
+
+if (producto.cupon == true) {
+    console.log(`El precio del ${producto.nombre} es de ${precio} , tienes ${descuento} de descuento el cual es ${descuentoAplicar}`);
+    console.log(`El total a pagar es de ${precioFinal}`);
+} else {
+    console.log(`No posees cupon, el precio a pagar es ${precio}`)
+}
+
+//Ejercicio 6.
+/*Tienes una lista de productos 
+ *y una lista de cantidades (stock). 
+ Tienes que decirle al usuario 
+ si lo que busca está disponible o no. */
+
+//Recorriendo un obj con array
+console.log('Ejercicio 6')
+
+const objArray = {
+    arrayElements: ['Martillo', 'Pala', 'Machete'],
+    arrayStocks: [3, 4, 0],
+};
+
+const buscandoProd = 'Machete';
+const indice = objArray.arrayElements.indexOf(buscandoProd);
+console.log(indice)
+
+if (indice !== -1) {
+    console.log(`La cantidad actual de ${buscandoProd} es '${objArray.arrayStocks[indice]}' en nuestra base de datos`)
 }
