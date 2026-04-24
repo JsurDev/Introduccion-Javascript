@@ -81,3 +81,142 @@ console.log(dias);
 const friends = ['Joseph1', 'Josep2', 'Joseph3'];
 friends.splice(0, 0, 'Aa', 'Bb');
 console.log(friends);
+
+
+/* .slice()
+    Nos permite copiar una parte de un arreglo a otro.
+    -1er parametro - Posicion desde donde queremos copiar.
+    -2do parametro - Hasta antes de que elemento copiar.
+*/
+
+const frutas = ['Fresa', 'Naranja', 'Mango', 'Pera', 'Manzana', 'Melon'];
+const frutasFav = frutas.slice(0, 3);
+console.log(frutasFav);
+
+/* .indexOf()
+    Obtenemos el primer index de un elemento.
+    Si no hay elementos retornara -1
+*/
+const nombres = [
+    'Jesur',
+    'Maria',
+    'Carlos',
+    'Ana',
+    'Roberto',
+    'Lucia',
+    'Diego',
+    'Elena',
+    'Fernando',
+    'Gabriela'
+];
+
+console.log(nombres.indexOf('Ana'));//Esta en la posicion 3. 
+console.log(nombres.indexOf('Elena'));//Esta en la posicion 7. 
+console.log(nombres.indexOf('Mark'));//-1 pues no existe.
+
+
+/* .indexOf()
+    Obtenemos el ultimo index de un elemento.
+*/
+const nombres2 = [
+    'Jesur',
+    'Maria',
+    'Carlos',
+    'Ana',
+    'Roberto',
+    'Lucia',
+    'Diego',
+    'Elena',
+    'Fernando',
+    'Gabriela'
+];
+
+console.log(nombres2.indexOf('Fernando'));
+
+
+/* .forEach()
+    Nos permite ejecutar una funcion por cada elemento.
+    .forEach() sabe que debe entregar :
+    1) nombre, 
+    2) posicion(indice) ,
+    3) Arreglo completo(opcional)
+*/
+
+nombres2.forEach((nombre) => {
+    console.log(`Hola ${nombre}`);
+});
+
+console.log('---------------------');
+console.log('Practicando');
+console.log('---------------------');
+
+//Aqui la palabra 'indice' podria ser reemplazado por cualquier palabra.
+nombres.forEach((nom, index) => {
+    console.log('Hey que tal ' + nom + ' ' + index);
+});
+
+
+/* .find()
+    Recorre el arreglo y devuelve el PRIMER elemento que retornemos.
+*/
+console.log('------------------------')
+console.log('Usando el metodo .find()')
+
+nombres.find((nombre) => {
+    console.log(nombre);
+});
+
+console.log('------------------------')
+console.log('Otra forma: ------------');
+
+const resultado = nombres.find((nombre) => {
+    if (nombre[0] === 'J') {
+        return nombre;
+    }
+});
+
+console.log(resultado);
+
+console.log(' ')
+console.log(' ')
+console.log(' ')
+console.log(' ')
+console.log(' ')
+
+/* .map()
+    Ejecuta una funcion por cada elemento y crea un nuevo
+    arreglo en base a los resultados de esa funcion
+*/
+const animales = [
+    'León',
+    'Elefante',
+    'Tigre',
+    'Cebra',
+    'Jirafa',
+    'Panda',
+    'Koala'
+];
+
+console.log(`Aqui estan sin mayusculas : ${animales}`)
+
+const nombreMayuscula = animales.map((nombreAnimal) => {
+    return nombreAnimal.toUpperCase();
+})
+console.log(`Aqui estan con mayusculas : ${nombreMayuscula}`);
+
+
+/* .filter()
+    Ejecuta una funcion por cada elemento y crea un nuevo
+    arreglo en base a los resultados de esa funcion.
+    Muestra resultados que complan con condicion.
+*/
+
+const nombres4Letras = animales.filter((nom4Ltr) => {
+    if (nom4Ltr.length === 4) {
+        return nom4Ltr;
+    }
+});
+
+console.log(nombres4Letras); 
+
+
