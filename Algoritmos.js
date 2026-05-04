@@ -91,6 +91,7 @@ listaNombres.forEach(empleado => {
 const misPrecios = [15, 25, 10, 45];
 
 let precioFinal = 0;
+
 misPrecios.forEach(precio => {
     if (precio < 20) {
         precioFinal = precio * 1.13;

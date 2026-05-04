@@ -217,6 +217,8 @@ const nombres4Letras = animales.filter((nom4Ltr) => {
     }
 });
 
-console.log(nombres4Letras); 
+console.log(nombres4Letras);
+
+
 
 
