@@ -1,0 +1,1 @@
+const nombresLatinos = ["aquiles", "elba", "zoila", "armando"];

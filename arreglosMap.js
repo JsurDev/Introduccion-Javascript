@@ -38,4 +38,21 @@ function upperCase(nombresStudents) {
 }
 
 console.log(mayusculasStudents);
+console.log("-----------------------")
 
+//Ejercicio 3.
+//Dar formato a fechas
+
+const fechas = ["2026-1-10", "2026-5-1", "2026-2-28"];
+
+//new array
+const nuevoFormatoFechas = fechas.map(formatoFechas);
+
+//imprimimos el nuevo formato
+console.log(nuevoFormatoFechas);
+
+
+function formatoFechas(fecha) {
+  const partes = fecha.split("-");
+  return `${partes[1]}/${partes[2]}/${partes[0]}`;
+}
