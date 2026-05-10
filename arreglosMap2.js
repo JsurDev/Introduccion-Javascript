@@ -40,7 +40,9 @@ usuariosPremium.forEach(({ id, nombre, status }) => {
     console.log(`ID: ${id} | nombre: ${nombre} | Tipo: ${status}`)
 })
 
+//Function.
 function formatUsers(nombre, indice) {
+
     const nombreCorrecto = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
 
     //Aqui retornare un objeto
