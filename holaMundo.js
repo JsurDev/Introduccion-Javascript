@@ -1,1 +1,0 @@
-alert('Desde archivo externo');
